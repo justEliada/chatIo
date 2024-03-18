@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    tools:context=".inbox">
+
+    <TextView
+        android:id="@+id/Veify"
+        android:layout_width="391dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="CHATio"
+        android:textColor="@color/backgroundPink"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchBarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Veify"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_below="@id/searchBarId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="371dp"
+            android:layout_height="67dp"
+            android:background="#000000"
+            android:gravity="center"
+            android:text="Inbox   Spaces   Thread"
+            android:textColor="#ffffff"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

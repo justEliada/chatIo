@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:background="@color/backgroundPink"
+    tools:context=".register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/chat"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:text="ChatIO"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:text="UserName"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/UserName"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/rounded_edittext_bg"
+                android:inputType="text"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:autofillHints="UserName"
+                android:paddingLeft="16dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Phone Number"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/PhoneNumberId"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:autofillHints="Password"
+                android:background="@drawable/rounded_edittext_bg"
+                android:inputType="text"
+                android:paddingLeft="16dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:text="Password"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/PasswordId"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/rounded_edittext_bg"
+                android:inputType="text"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:autofillHints="UserName"
+                android:paddingLeft="16dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:text="Confirm Password"
+                android:textColor="#fff"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/ConfirmationPassword"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/rounded_edittext_bg"
+                android:inputType="text"
+                android:layout_marginBottom="20dp"
+                android:textColor="#000000"
+                android:autofillHints="UserName"
+                android:paddingLeft="16dp"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/RegisterButtonRegisterScreen"
+            android:layout_width="276dp"
+            android:layout_height="52dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edittext_bg"
+            android:text="Resister"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

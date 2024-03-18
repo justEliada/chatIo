@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/imageViewError"
+        android:layout_width="match_parent"
+        android:layout_height="308dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/auth" />
+
+    <TextView
+        android:id="@+id/Veify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewError"
+        android:text="Verify Your Account?"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_below="@id/Veify"
+        android:id="@+id/EmailVerificationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="A code has been sent to your mobile number"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/VerificationCode"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/EmailVerificationText"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="UserName"
+        android:background="@drawable/empty_button"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:hint="Enter Code"
+        android:paddingLeft="16dp"/>
+
+
+    <Button
+        android:id="@+id/continueBUTTON"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/VerificationCode"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="116dp"
+        android:background="@drawable/square_button"
+        android:gravity="center"
+        android:text="Continue" />
+
+
+</RelativeLayout>
