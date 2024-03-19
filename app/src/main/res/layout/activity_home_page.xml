@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:gravity="center"
-    tools:context=".inbox">
+    tools:context=".activities.inbox">
 
     <TextView
         android:id="@+id/Veify"

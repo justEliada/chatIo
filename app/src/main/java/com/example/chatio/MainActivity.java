@@ -15,6 +15,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.chatio.activities.authentication;
+import com.example.chatio.activities.inbox;
+import com.example.chatio.activities.register;
+
 public class MainActivity extends AppCompatActivity {
 
     //declaring the buttons

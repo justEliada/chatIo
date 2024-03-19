@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "527774621050",
+    "project_id": "chatio-634a9",
+    "storage_bucket": "chatio-634a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527774621050:android:8ab3e5a39d498b43d18ac3",
+        "android_client_info": {
+          "package_name": "com.example.chatio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSxFDPJaD2ROOK72wy5xyQfAauE5AcmZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

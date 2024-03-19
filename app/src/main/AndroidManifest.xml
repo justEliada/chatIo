@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,16 +15,16 @@
         android:theme="@style/Theme.ChatIO"
         tools:targetApi="31">
         <activity
-            android:name=".home_page"
+            android:name=".activities.home_page"
             android:exported="false" />
         <activity
-            android:name=".inbox"
+            android:name=".activities.inbox"
             android:exported="false" />
         <activity
-            android:name=".authentication"
+            android:name=".activities.authentication"
             android:exported="false" />
         <activity
-            android:name=".register"
+            android:name=".activities.register"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -33,6 +35,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service
+            android:name=".firebase.MessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

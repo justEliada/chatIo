@@ -1,14 +1,16 @@
-package com.example.chatio;
+package com.example.chatio.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class home_page extends AppCompatActivity {
+import com.example.chatio.R;
+
+public class register extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_register);
     }
 }

@@ -1,14 +1,16 @@
-package com.example.chatio;
+package com.example.chatio.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class authentication extends AppCompatActivity {
+import com.example.chatio.R;
+
+public class inbox extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_authentication);
+        setContentView(R.layout.activity_inbox);
     }
 }
