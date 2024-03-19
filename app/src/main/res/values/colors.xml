@@ -5,4 +5,5 @@
     <color name="Pink">#FCB1A6</color>
     <color name="Beige">#FFDCCC</color>
     <color name="white">#FFF9EC</color>
+    <color name="receivedMessage">#F2DDFF</color>
 </resources>
