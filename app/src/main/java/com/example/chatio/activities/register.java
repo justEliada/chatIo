@@ -11,6 +11,7 @@ import com.example.chatio.databinding.ActivityRegisterBinding;
 
 public class register extends AppCompatActivity {
 
+    //Data binding; simplier way of connecting views with each other
     private ActivityRegisterBinding binding;
 
     @Override
@@ -24,7 +25,7 @@ public class register extends AppCompatActivity {
 
     private void setListeners() {
         binding.RegisterButtonRegisterScreen.setOnClickListener(
-                v -> onBackPressed());
+                v -> onBackPressed()); // doesnt work
 
     }
 

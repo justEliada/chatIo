@@ -13,7 +13,7 @@ android {
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
-
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -55,5 +55,8 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-messaging:23.4.1")
     implementation("com.google.firebase:firebase-firestore:24.10.3")
+
+    //MultiDex-> breaks android compiled code, not to take too much space
+    implementation("androidx.multidex:multidex:2.0.1")
 
 }

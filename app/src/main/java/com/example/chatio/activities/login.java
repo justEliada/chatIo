@@ -3,7 +3,12 @@ package com.example.chatio.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import com.example.chatio.databinding.ActivityLoginBinding;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 public class login extends AppCompatActivity {
 
@@ -20,8 +25,23 @@ public class login extends AppCompatActivity {
     private void setListeners(){
         binding.RegisterButton.setOnClickListener(v->
                 startActivity(new Intent(getApplicationContext(), register.class)));
+        binding.LoginButton.setOnClickListener(v->addDataToFirestore());
     }
 
+    private void addDataToFirestore(){
+        FirebaseFirestore database = FirebaseFirestore.getInstance();
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("first_name", "Eliada");
+        data.put("last_name", "Ballazhi");
+        database.collection("users")
+                .add(data)
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(getApplicationContext(),"Data Inserted", Toast.LENGTH_SHORT).show();
+                })
+                .addOnFailureListener(exception -> {
+                    Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+    }
 
 
 
