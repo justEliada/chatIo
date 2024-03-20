@@ -10,7 +10,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 
-public class login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
 
@@ -24,7 +24,7 @@ public class login extends AppCompatActivity {
 
     private void setListeners(){
         binding.RegisterButton.setOnClickListener(v->
-                startActivity(new Intent(getApplicationContext(), register.class)));
+                startActivity(new Intent(getApplicationContext(), Register.class)));
         binding.LoginButton.setOnClickListener(v->addDataToFirestore());
     }
 

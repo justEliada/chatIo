@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.chatio.R;
 
-public class home_page extends AppCompatActivity {
+public class HomePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -7,6 +7,6 @@
     android:overScrollMode="never"
     android:scrollbars="none"
     android:background="@color/backgroundPink"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
 </ScrollView>

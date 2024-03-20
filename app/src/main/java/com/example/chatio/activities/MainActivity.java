@@ -6,11 +6,12 @@ import android.os.Bundle;
 
 import com.example.chatio.R;
 
-public class inbox extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inbox);
+        setContentView(R.layout.activity_main);
     }
+
 }

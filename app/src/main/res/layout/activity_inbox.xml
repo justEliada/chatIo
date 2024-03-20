@@ -8,7 +8,7 @@
     android:padding="20dp"
     android:gravity="center"
     android:background="@color/backgroundPink"
-    tools:context=".activities.inbox">
+    tools:context=".activities.Inbox">
 
     <TextView
         android:id="@+id/Veify"
