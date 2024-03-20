@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:background="@drawable/rounded_edittext_bg"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:autofillHints="Password"
                 android:textColor="#000000"
                 android:paddingLeft="16dp"/>
