@@ -22,6 +22,13 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         preferenceManager = new PreferenceManager(getApplicationContext());
+        // if user is singed in it doesn't need to sign in again
+        if(preferenceManager.getBoolean(Constants.KEY_IS_SIGNED_IN)){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+
+        }
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setListeners();
@@ -96,29 +103,6 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), exception.getMessage(), Toast.LENGTH_SHORT).show();
                 });
     }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /*//declaring the buttons
     private Button loginButton;
