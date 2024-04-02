@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         documentReference.update(updates)
                 .addOnSuccessListener(unused -> {
                     preferenceManager.clear();
-                    startActivity(new Intent(getApplicationContext(), Register.class));
+                    startActivity(new Intent(getApplicationContext(), Login.class));
                     finish();
                 })
                 .addOnFailureListener(e-> showToast("Unable to log out"));

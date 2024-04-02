@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="backgroundPink">#5D2A42</color>
+    <color name="darkerPink">#9AEA88B6</color>
     <color name="BrightPink">#FB6376</color>
     <color name="Pink">#FCB1A6</color>
     <color name="Beige">#FFDCCC</color>
