@@ -3,20 +3,19 @@ package com.example.chatio.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import androidx.activity.OnBackPressedCallback;
+import androidx.activity.OnBackPressedDispatcher;
 
 import com.example.chatio.R;
 import com.example.chatio.adapters.UsersAdapters;
-import com.example.chatio.databinding.ActivityMainBinding;
 import com.example.chatio.databinding.ActivityUsersBinding;
 import com.example.chatio.models.User;
 import com.example.chatio.utilitis.Constants;
 import com.example.chatio.utilitis.PreferenceManager;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-
-import org.checkerframework.checker.units.qual.C;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +29,6 @@ public class UsersActivity extends AppCompatActivity {
         binding = ActivityUsersBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
-        setContentView(R.layout.activity_users);
         setListeners();
         getUsers();
     }
@@ -44,6 +42,21 @@ public class UsersActivity extends AppCompatActivity {
     private void setListeners(){
         binding.imageBack.setOnClickListener(v -> onBackPressed());
     }
+
+ /*   private void setListeners(){
+        OnBackPressedCallback callback = new OnBackPressedCallback(true *//* enabled by default *//*) {
+            @Override
+            public void handleOnBackPressed() {
+                // Handle the back button event
+                finish();
+            }
+        };
+        getOnBackPressedDispatcher().addCallback(this, callback);
+
+        binding.imageBack.setOnClickListener(v -> callback.handleOnBackPressed());
+    }
+*/
+
     private void getUsers(){
         loading(true);
         FirebaseFirestore database = FirebaseFirestore.getInstance();
@@ -74,11 +87,13 @@ public class UsersActivity extends AppCompatActivity {
                             showErrorMessage();
                         }
                     }else{
+                        Log.e("UsersActivity", "Error fetching users", task.getException()); // Log the error
                         showErrorMessage();
                     }
 
                 });
     }
+
     private void loading(Boolean isLoading){
         if(isLoading)
         {
