@@ -18,6 +18,17 @@
 
         />
 
+    <View
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:background="@color/backgroundPink"
+        app:layout_constraintBottom_toTopOf="@+id/viewSupporter"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageBack"
         android:layout_width="@dimen/_30sdp"
@@ -28,14 +39,14 @@
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/backgroundPink" />
+        app:tint="@color/BrightPink" />
 
     <TextView
         android:id="@+id/textName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_8sdp"
         android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
         android:ellipsize="end"
         android:gravity="center"
         android:maxLines="1"
@@ -44,9 +55,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/imageBack"
         app:layout_constraintEnd_toStartOf="@+id/imageInfo"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageBack"
         app:layout_constraintTop_toTopOf="@+id/imageBack"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
@@ -56,6 +68,7 @@
         android:orientation="vertical"
         android:overScrollMode="never"
         android:padding="@dimen/_20sdp"
+        app:stackFromEnd="true"
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/ViewBackground"
@@ -119,7 +132,7 @@
         android:paddingStart="@dimen/_16sdp"
         android:paddingEnd="@dimen/_16sdp"
         android:textColor="@color/white"
-        android:textColorHint="@color/backgroundPink"
+        android:textColorHint="@color/BrightPink"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/layoutSend"
         app:layout_constraintHorizontal_bias="0.0"
@@ -129,7 +142,7 @@
         android:id="@+id/imageInfo"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
-        android:layout_marginTop="20.08dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:padding="@dimen/_8sdp"
         android:src="@drawable/ic_info"

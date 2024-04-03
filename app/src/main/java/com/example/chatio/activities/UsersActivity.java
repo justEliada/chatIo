@@ -36,7 +36,7 @@ public class UsersActivity extends AppCompatActivity implements UserListener {
     }
 
     private void showErrorMessage(){
-        binding.textErrorMessage.setText(String.format("%s", "No user is availabe"));
+        binding.textErrorMessage.setText(String.format("%s", "No user is available"));
         binding.textErrorMessage.setVisibility(View.VISIBLE);
 
     }
@@ -65,6 +65,7 @@ public class UsersActivity extends AppCompatActivity implements UserListener {
                             user.phoneNumber = queryDocumentSnapshot.getString(Constants.KEY_PHONE);
                             user.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
                             user.token = queryDocumentSnapshot.getString(Constants.KEY_FCM_TOKEN);
+                            user.id = queryDocumentSnapshot.getId();
                             users.add(user);
                         }
                         if(users.size() > 0){
