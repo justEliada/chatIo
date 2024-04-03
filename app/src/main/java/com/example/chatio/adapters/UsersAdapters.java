@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.chatio.databinding.ItemContainerUserBinding;
+import com.example.chatio.listeners.UserListener;
 import com.example.chatio.models.User;
 
 import java.util.List;
@@ -14,9 +15,11 @@ import java.util.List;
 public class UsersAdapters extends RecyclerView.Adapter<UsersAdapters.UserViewHolder>{
 
     private final List<User> users;
+    private final UserListener userListener;
 
-    public UsersAdapters(List<User> users) {
+    public UsersAdapters(List<User> users, UserListener userListener) {
         this.users = users;
+        this.userListener = userListener;
     }
 
     @NonNull
@@ -53,6 +56,7 @@ public class UsersAdapters extends RecyclerView.Adapter<UsersAdapters.UserViewHo
             binding.textName.setText(user.username);
             binding.textPhone.setText(user.phoneNumber);
             binding.imageProfile.setImageBitmap(getUserImage(user.image));
+            binding.getRoot().setOnClickListener(view -> userListener.onUserClicked(user));
 
         }
 

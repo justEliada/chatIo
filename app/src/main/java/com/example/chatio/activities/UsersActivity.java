@@ -2,6 +2,7 @@ package com.example.chatio.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import androidx.activity.OnBackPressedDispatcher;
 import com.example.chatio.R;
 import com.example.chatio.adapters.UsersAdapters;
 import com.example.chatio.databinding.ActivityUsersBinding;
+import com.example.chatio.listeners.UserListener;
 import com.example.chatio.models.User;
 import com.example.chatio.utilitis.Constants;
 import com.example.chatio.utilitis.PreferenceManager;
@@ -19,7 +21,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsersActivity extends AppCompatActivity {
+public class UsersActivity extends AppCompatActivity implements UserListener {
     private ActivityUsersBinding binding;
     private PreferenceManager preferenceManager;
 
@@ -42,20 +44,6 @@ public class UsersActivity extends AppCompatActivity {
     private void setListeners(){
         binding.imageBack.setOnClickListener(v -> onBackPressed());
     }
-
- /*   private void setListeners(){
-        OnBackPressedCallback callback = new OnBackPressedCallback(true *//* enabled by default *//*) {
-            @Override
-            public void handleOnBackPressed() {
-                // Handle the back button event
-                finish();
-            }
-        };
-        getOnBackPressedDispatcher().addCallback(this, callback);
-
-        binding.imageBack.setOnClickListener(v -> callback.handleOnBackPressed());
-    }
-*/
 
     private void getUsers(){
         loading(true);
@@ -80,7 +68,7 @@ public class UsersActivity extends AppCompatActivity {
                             users.add(user);
                         }
                         if(users.size() > 0){
-                            UsersAdapters usersAdapters = new UsersAdapters(users);
+                            UsersAdapters usersAdapters = new UsersAdapters(users, this);
                             binding.usersRecyclerView.setAdapter(usersAdapters);
                             binding.usersRecyclerView.setVisibility(View.VISIBLE);
                         }else{
@@ -102,5 +90,13 @@ public class UsersActivity extends AppCompatActivity {
             binding.progressBar.setVisibility(View.INVISIBLE);
 
         }
+    }
+
+    @Override
+    public void onUserClicked(User user){
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        intent.putExtra(Constants.KEY_USER,user);
+        startActivity(intent);
+        finish();
     }
 }
