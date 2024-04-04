@@ -75,8 +75,15 @@ public class RecentConversationAdapter extends RecyclerView.Adapter<RecentConver
         }
 
         private Bitmap getConversationImage(String encodedImage){
+            if(encodedImage == null || encodedImage.isEmpty()) {
+                return null;
+            }
             byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
-            return BitmapFactory.decodeByteArray(bytes,0, bytes.length);
+            return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
         }
+
+
+
+
     }
 }

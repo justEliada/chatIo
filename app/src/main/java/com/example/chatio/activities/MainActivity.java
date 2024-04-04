@@ -67,15 +67,12 @@ public class MainActivity extends AppCompatActivity implements ConversationListe
     private void loadUserDetails() {
         String name = preferenceManager.getString(Constants.KEY_NAME);
         String imageData = preferenceManager.getString(Constants.KEY_IMAGE);
-
-        // Set the name text
         if (name != null && !name.isEmpty()) {
             binding.textName.setText(name);
         } else {
             Log.e("MainActivity", "Name is null or empty");
         }
 
-        // Attempt to load the profile image
         if (imageData != null && !imageData.isEmpty()) {
             try {
                 byte[] bytes = Base64.decode(imageData, Base64.DEFAULT);
