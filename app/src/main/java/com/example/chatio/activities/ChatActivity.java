@@ -162,12 +162,6 @@ public class ChatActivity extends AppCompatActivity {
     };
 
 
-/*    private Bitmap getBitmapFromEncodedString(String encodedImage) {
-        byte[] bytes = Base64.decode(encodedImage, Base64.DEFAULT);
-        return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-
-    }*/
-
     private Bitmap getBitmapFromEncodedString(String encodedImage) {
         if (encodedImage == null || encodedImage.isEmpty()) {
             return null;

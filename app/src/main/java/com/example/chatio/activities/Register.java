@@ -27,8 +27,6 @@ import java.io.InputStream;
 import java.util.HashMap;
 
 public class Register extends AppCompatActivity {
-
-    //Data binding; simplier way of connecting views with each other
     private ActivityRegisterBinding binding;
     private PreferenceManager preferenceManager;
     private String encodedImage;
@@ -37,7 +35,7 @@ public class Register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot()); // Correct way to set content view using binding
+        setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
         setListeners();
     }
